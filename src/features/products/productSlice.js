@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 export const fetchProducts = createAsyncThunk('products/fetchProducts', async () => {
-  const response = await axios.get('https://online-json-server-api.up.railway.app/project/66a7670d1d2cd3eb11451c08/desserts');
+  const response = await axios.get('https://json-api.uz/api/project/dessert-b/desserts');
   console.log("API response data:", response.data); // Log the response data
   return response.data.data; // Extract the array from the `data` property
 });
